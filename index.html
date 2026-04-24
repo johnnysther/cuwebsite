@@ -41,16 +41,18 @@
     /* eyebrow */
     .eyebrow {
       display: inline-block;
-      padding: 8px 14px;
-      border: 1px solid rgba(0,102,204,.3);
-      border-radius: 999px;
+      padding: 0 0 0 12px;
+      border: none;
+      border-left: 2px solid var(--accent);
+      border-radius: 0;
       color: var(--accent);
-      font-size: 12px;
-      letter-spacing: .1em;
+      font-size: 11px;
+      letter-spacing: .16em;
       text-transform: uppercase;
-      background: rgba(0,102,204,.06);
-      margin-bottom: 16px;
+      background: none;
+      margin-bottom: 18px;
       font-weight: 700;
+      line-height: 1.4;
     }
 
     /* nav */
@@ -120,13 +122,23 @@
     }
     .hero-overlay {
       position: absolute; inset: 0;
-      background: linear-gradient(100deg, rgba(10,30,70,.62) 0%, rgba(10,30,70,.35) 55%, rgba(10,30,70,.15) 100%);
+      background: linear-gradient(105deg, rgba(5,12,38,.88) 0%, rgba(5,12,38,.72) 50%, rgba(5,12,38,.45) 100%);
     }
     .hero-content { position: relative; z-index: 10; padding: 80px 0; width: 100%; }
-    .hero-copy .eyebrow { border-color: rgba(255,255,255,.4); color: #ffffff; background: rgba(255,255,255,.12); }
-    .hero h1 { margin: 18px 0 22px; font-size: clamp(36px,5vw,64px); line-height: 1.08; letter-spacing: -.04em; font-weight: 900; color: #ffffff; text-shadow: 0 2px 12px rgba(0,0,0,.2); word-break: keep-all; }
+    .hero-copy {
+      max-width: 680px; padding-left: 24px; transition: opacity 0.22s ease;
+      background: linear-gradient(90deg, rgba(5,12,38,.55) 0%, transparent 100%);
+      padding: 36px 48px 36px 32px;
+      border-radius: 12px;
+    }
+    .hero-copy .eyebrow { border-left-color: rgba(255,255,255,.8); color: rgba(255,255,255,.9); background: none; }
+    .hero h1 { margin: 18px 0 22px; font-size: clamp(36px,5vw,64px); line-height: 1.08; letter-spacing: -.04em; font-weight: 900; color: #ffffff; text-shadow: 0 2px 20px rgba(0,0,0,.7); word-break: keep-all; }
     .hero h1 em { font-style: normal; color: #f0c060; }
-    .hero-desc { max-width: 580px; color: rgba(255,255,255,.88); font-size: 18px; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; }
+    .hero-desc { max-width: 560px; color: #ffffff; font-size: 17px; line-height: 1.8; word-break: keep-all; overflow-wrap: break-word; text-shadow: 0 1px 12px rgba(0,0,0,.8); }
+    @media (max-width: 760px) {
+      .hero-overlay { background: rgba(5,12,38,.80); }
+      .hero-copy { padding: 24px 20px; background: none; }
+    }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
     .hero-actions .btn-primary:hover { background: #ffffff; color: var(--accent); box-shadow: 0 8px 24px rgba(255,255,255,.25); }
     .btn-outline { background: transparent; color: #ffffff; border-color: rgba(255,255,255,.55); }
@@ -134,13 +146,13 @@
     .hero-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 32px; }
     @media (max-width: 600px) { .hero-cards { grid-template-columns: 1fr; } }
     .hero-card { padding: 16px 18px; border: 1px solid rgba(255,255,255,.22); background: rgba(255,255,255,.1); backdrop-filter: blur(8px); border-radius: 16px; word-break: keep-all; overflow-wrap: break-word; }
-    .hero-card strong { display: block; font-size: 10px; font-weight: 700; color: #f0c060; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; word-break: keep-all; }
+    .hero-card strong { display: block; font-size: 13px; font-weight: 700; color: #f0c060; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 8px; word-break: keep-all; }
     .hero-card-value { display: block; color: #ffffff; font-size: 14px; font-weight: 700; line-height: 1.4; word-break: keep-all; overflow-wrap: break-word; }
     .hero-card-value.is-count { font-size: 30px; font-weight: 900; letter-spacing: -.02em; line-height: 1; margin-bottom: 4px; }
     .hero-card small { display: block; color: rgba(255,255,255,.62); font-size: 11px; margin-top: 5px; line-height: 1.4; word-break: keep-all; }
 
     /* Hero copy + animations */
-    .hero-copy { max-width: 680px; padding-left: 24px; transition: opacity 0.22s ease; }
+    .hero-copy { max-width: 680px; transition: opacity 0.22s ease; }
     @keyframes fadeUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
     @keyframes slideInRight { from { opacity: 0; transform: translateX(52px); } to { opacity: 1; transform: translateX(0); } }
     .hero-copy.animating > * { opacity: 0; animation: fadeUp .8s ease-out forwards; }
@@ -670,7 +682,7 @@
     const slideData = [
       {
         eyebrow: "Your End-to-End Partner",
-        h1: "어떤 사업지든,<br>우리의 손에서<br><em>결과가 나옵니다.</em>",
+        h1: "어떤 사업지든,<br>우리의 손에서<br><em>결과가 나옵니다</em>",
         desc: "18년의 검증된 데이터와 실전 노하우로 레저 자산의 새로운 기준을 제시합니다.",
         ctas: [
           { text: "성공 레퍼런스", href: "portfolio.html", cls: "btn-primary" },
@@ -678,14 +690,14 @@
         ],
         cards: [
           { label: "Professional", text: "분야별 최고의 전문가 그룹" },
-          { label: "Performance", text: "숫자로 증명하는 압도적 실적" },
-          { label: "Partnership", text: "대기업이 먼저 찾는 신뢰의 이름" }
+          { label: "Performance", text: "숫자로 증명하는<br>압도적 실적" },
+          { label: "Partnership", text: "대기업이 먼저 찾는<br>신뢰의 이름" }
         ]
       },
       {
         eyebrow: "Verified",
-        h1: "대한민국 상위 1% 오너들이<br>위기의 순간, 가장 먼저<br><em>씨유레저를 찾는 이유.</em>",
-        desc: "치명적 리스크를 차단하고 사업의 뼈대부터 다시 세워야 한다면, 시장의 정답은 이미 정해져 있습니다.",
+        h1: "대한민국 상위 1% 오너들이<br>위기의 순간, 가장 먼저<br><em>씨유레저를 찾는 이유</em>",
+        desc: "치명적 리스크를 차단하고 사업의 뼈대부터 다시 세워야 한다면,<br>시장의 정답은 이미 정해져 있습니다.",
         ctas: [
           { text: "무료 사업지 정밀진단", href: "solution.html", cls: "btn-primary" },
           { text: "오너들이 증명하는 추천사", href: "#testimonials", cls: "btn-outline" }
@@ -698,8 +710,8 @@
       },
       {
         eyebrow: "Partnership",
-        h1: "까다로운 글로벌 브랜드가<br>수많은 대행사를 두고<br><em>'씨유레저'를 지목한 이유.</em>",
-        desc: "롯데, 워커힐, 메리어트 등 글로벌 리더들이 단발성 계약이 아닌 '라이프롱 파트너'로 우리를 선택했습니다.",
+        h1: "까다로운 글로벌 브랜드가<br>수많은 대행사를 두고<br><em>'씨유레저'를 지목한 이유</em>",
+        desc: "롯데, 워커힐, 메리어트, 시에나 등 글로벌 리더들이 단발성 계약이 아닌<br>'라이프롱 파트너'로 우리를 선택했습니다.",
         ctas: [
           { text: "협력 파트너사 확인하기", href: "client.html", cls: "btn-primary" },
           { text: "주요 프로젝트 실적보기", href: "#client-logos", cls: "btn-outline" }
@@ -712,21 +724,21 @@
       },
       {
         eyebrow: "Results",
-        h1: "우리의 입이 아닌,<br>누구도 부정할 수 없는<br><em>'압도적인 숫자'가 실력을 증명합니다.</em>",
-        desc: "결과가 확실하지 않다면 하이엔드 시장은 움직이지 않습니다. 우리가 시장을 장악한 3가지 절대 지표입니다.",
+        h1: "우리의 입이 아닌,<br>누구도 부정할 수 없는<br><em>'압도적인 숫자'가 실력을 증명합니다</em>",
+        desc: "결과가 확실하지 않다면 하이엔드 시장은 움직이지 않습니다.<br>우리가 시장을 장악한 3가지 절대 지표입니다.",
         ctas: [
           { text: "성공 레퍼런스 확인하기", href: "portfolio.html", cls: "btn-primary" },
           { text: "18년 무사고 기록 증명", href: "#performance-stats", cls: "btn-outline" }
         ],
         cards: [
-          { label: "무결점 기록", countUp: true, target: 18, suffix: "년", sub: "연속 금융사고 ZERO" },
+          { label: "Zero Incidents", countUp: true, target: 18, suffix: "년", sub: "연속 금융사고 ZERO" },
           { label: "VIP DB", countUp: true, target: 250000, suffix: "", sub: "프리미엄 고객" },
-          { label: "실행력", text: "100%", sub: "정상화 실행력" }
+          { label: "Execution", countUp: true, target: 100, suffix: "%", sub: "정상화 실행력" }
         ]
       },
       {
         eyebrow: "Execute",
-        h1: "당신의 사업지도,<br>이 성공의 기록들에<br><em>합류할 수 있습니다.</em>",
+        h1: "당신의 사업지도,<br>이 성공의 기록들에<br><em>합류할 수 있습니다</em>",
         desc: "시장을 주도하는 리더들은 이미 씨유레저의 시스템 안에서 움직이고 있습니다. 이제 귀사의 차례입니다.",
         ctas: [
           { text: "1:1 프로젝트 의뢰하기", href: "contact.html", cls: "btn-primary" },
@@ -748,9 +760,10 @@
           <small>${card.sub}</small>
         </div>`;
       }
+      const valClass = card.large ? 'hero-card-value is-count' : 'hero-card-value';
       return `<div class="hero-card">
         <strong>${card.label}</strong>
-        <span class="hero-card-value">${card.text}</span>
+        <span class="${valClass}">${card.text}</span>
         ${card.sub ? `<small>${card.sub}</small>` : ''}
       </div>`;
     }
