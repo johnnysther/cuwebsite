@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>스카이뷰 컨트리클럽 | CU Leisure Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../common.css" />
+  <style>
+    .detail-hero { padding: 120px 0 80px; background: linear-gradient(135deg, rgba(0,102,204,.08), rgba(232,244,248,.12)); border-bottom: 1px solid var(--line); }
+    .detail-head { max-width: 800px; }
+    .detail-head h1 { font-size: clamp(36px,5vw,56px); line-height: 1.15; font-weight: 900; color: #1a2332; margin-bottom: 20px; }
+    .detail-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 32px; padding-top: 32px; border-top: 1px solid var(--line); }
+    .detail-meta-item strong { display: block; font-size: 11px; color: var(--accent); text-transform: uppercase; letter-spacing: .1em; font-weight: 700; margin-bottom: 6px; }
+    .detail-meta-item span { color: #1a2332; font-size: 15px; font-weight: 600; }
+
+    .detail-section { padding: 100px 0; }
+    .detail-section h2 { font-size: 36px; font-weight: 900; color: #1a2332; margin-bottom: 32px; }
+    .detail-section p { color: #5a6b7f; font-size: 16px; line-height: 2; margin-bottom: 20px; }
+
+    .highlight-box { background: linear-gradient(160deg, rgba(0,102,204,.05), rgba(232,244,248,.08)); border: 1px solid rgba(0,102,204,.15); border-radius: 20px; padding: 40px; margin: 40px 0; }
+    .highlight-box h3 { font-size: 22px; font-weight: 800; color: #1a2332; margin-bottom: 16px; }
+    .highlight-box p { color: #5a6b7f; line-height: 1.85; }
+
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin: 40px 0; }
+    .stat-card { padding: 32px; border-radius: 16px; background: #f8fbff; border: 1px solid rgba(0,102,204,.1); text-align: center; }
+    .stat-number { font-size: 42px; font-weight: 900; color: var(--accent); line-height: 1; margin-bottom: 12px; }
+
+    .image-section { width: 100%; height: 400px; border-radius: 20px; background: linear-gradient(135deg, rgba(0,102,204,.12), rgba(232,244,248,.15)), url('https://unsplash.com/photos/bCK0gvNmK7A/download?force=true&w=1400'); background-size: cover; background-position: center; margin: 40px 0; border: 1px solid var(--line); }
+
+    .cta-detail { background: linear-gradient(160deg, rgba(0,102,204,.08), rgba(232,244,248,.12)); border: 1px solid rgba(0,102,204,.15); border-radius: 20px; padding: 48px; text-align: center; margin-top: 80px; }
+    .cta-detail h3 { font-size: 28px; font-weight: 900; color: #1a2332; margin-bottom: 16px; }
+    .cta-detail p { color: #5a6b7f; font-size: 16px; margin-bottom: 24px; }
+
+    @media (max-width: 1100px) {
+      .stats-grid { grid-template-columns: 1fr; }
+      .detail-meta { flex-direction: column; gap: 16px; }
+    }
+    @media (max-width: 760px) {
+      .image-section { height: 240px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="../index.html" class="brand">CU <span>Leisure</span></a>
+      <nav class="nav-links">
+        <a href="../about.html">About</a>
+        <a href="../solution.html">Solution</a>
+        <a href="../portfolio.html">Portfolio</a>
+        <a href="../client.html">Client</a>
+        <a href="../insight.html">Insight</a>
+        <a href="../contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="../contact.html">Contact Us</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="detail-hero">
+      <div class="container">
+        <div class="detail-head">
+          <span class="eyebrow">Golf Club</span>
+          <h1>스카이뷰 컨트리클럽</h1>
+          <p style="color: #5a6b7f; font-size: 18px; margin-top: 16px;">창립 초기 분양부터 법정관리까지의 사이클 경험</p>
+          <div class="detail-meta">
+            <div class="detail-meta-item">
+              <strong>기간</strong>
+              <span>2009년 3월 ~ 2012년 6월</span>
+            </div>
+            <div class="detail-meta-item">
+              <strong>위치</strong>
+              <span>경남 함양군</span>
+            </div>
+            <div class="detail-meta-item">
+              <strong>역할</strong>
+              <span>창립 분양 및 운영 관리</span>
+            </div>
+            <div class="detail-meta-item">
+              <strong>결과</strong>
+              <span>VIP 특별 주중회원권 분양 성공, 대중제 전환 및 법정관리 경험</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="detail-section">
+      <div class="container">
+        <h2>프로젝트 개요</h2>
+        <p>스카이뷰 컨트리클럽은 씨우레저의 창립 프로젝트입니다. 초기 창립 분양에서 VIP 고객 확보에 성공했으나, 이후 시장 변화에 따라 대중제로 전환되었고 최종적으로 법정관리까지 경험하게 되었습니다. 이 과정에서 골프장 사업의 전체 사이클을 경험했습니다.</p>
+        
+        <div class="highlight-box">
+          <h3>✅ 프로젝트의 특징</h3>
+          <p>이 프로젝트는 회원권 산업의 다양한 영역을 경험하게 해준 중요한 사례입니다. 리조트, 골프장, 호텔 피트니스, 법정관리 회생 등 다양한 사업 형태에서의 실제 경험을 통해, 씨우레저는 어떤 상황에서도 실행 가능한 솔루션을 제시할 수 있는 역량을 갖추게 되었습니다.</p>
+        </div>
+
+        <div class="image-section"></div>
+
+        <h2 style="margin-top: 80px;">핵심 성과</h2>
+        <p>이 프로젝트에서 우리가 배운 가장 중요한 교훈은 "<em>시장 상황의 변화에 빠르게 대응하는 것</em>"의 중요성입니다. 초기 계획이 통하지 않을 때, 즉시 대안을 찾고 실행할 수 있는 조직의 유연성이 성공의 열쇠입니다.</p>
+      </div>
+    </section>
+
+    <section class="detail-section" style="background: linear-gradient(180deg, rgba(0,102,204,.02), transparent); padding: 100px 0; border-top: 1px solid var(--line);">
+      <div class="container">
+        <div class="cta-detail">
+          <h3>다양한 상황에서의 경험이 필요하신가요?</h3>
+          <p>18년의 경험과 50+ 프로젝트를 통해 쌓은 노하우로 당신의 사업을 지원하겠습니다.</p>
+          <a class="btn btn-primary" href="../contact.html">상담 신청하기</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="../about.html">About</a>
+          <a href="../portfolio.html">Portfolio</a>
+          <a href="../insight.html">Insight</a>
+          <a href="../contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

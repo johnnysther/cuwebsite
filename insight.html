@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Insight | CU Leisure</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="common.css"/>
+  <style>
+    .insight-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 28px; }
+    .insight-card { display: block; color: inherit; border-radius: var(--radius); border: 1px solid var(--line); background: #ffffff; overflow: hidden; transition: transform .25s, box-shadow .25s, border-color .25s; box-shadow: var(--shadow); }
+    .insight-card:hover { transform: translateY(-5px); box-shadow: 0 16px 36px rgba(0,66,204,.12); border-color: rgba(0,102,204,.18); }
+    .insight-thumb { height: 200px; background: center/cover no-repeat; border-bottom: 1px solid var(--line); position: relative; }
+    .insight-thumb::after { content: ''; position: absolute; inset: 0; background: linear-gradient(180deg,rgba(12,18,32,.05),rgba(12,18,32,.4)); }
+    .insight-body { padding: 26px; }
+    .insight-cat { display: inline-block; padding: 4px 12px; border-radius: 999px; background: rgba(0,102,204,.1); border: 1px solid rgba(0,102,204,.25); color: var(--accent); font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 14px; }
+    .insight-body h3 { font-size: 18px; font-weight: 800; line-height: 1.4; margin-bottom: 12px; }
+    .insight-body p { color: var(--muted); font-size: 14px; line-height: 1.7; margin-bottom: 16px; }
+    .insight-meta { color: #5a6b7f; font-size: 12px; display: flex; gap: 8px; align-items: center; }
+    .insight-meta span { color: #5a6b7f; }
+    .featured-card { grid-column: span 2; display: grid; grid-template-columns: 1fr 1fr; }
+    .featured-card .insight-thumb { height: auto; min-height: 100%; }
+    @media(max-width:1100px) { .insight-grid { grid-template-columns: repeat(2,1fr); } .featured-card { grid-column: span 1; display: block; } .featured-card .insight-thumb { height: 200px; } }
+    @media(max-width:760px) { .insight-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">CU <span>Leisure</span></a>
+      <nav class="nav-links">
+        <a href="about.html">About</a>
+        <a href="solution.html">Solution</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="client.html">Client</a>
+        <a href="insight.html" class="active">Insight</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn-secondary btn-sm" href="contact.html">Contact Us</a>
+    </div>
+  </header>
+  <main>
+    <section class="page-hero" style="background-image:url('https://unsplash.com/photos/cR4vAqsb-lE/download?force=true&w=1600');">
+      <div class="container">
+        <span class="eyebrow">Insight</span>
+        <h1>전문가가 진단하는<br>레저 시장의 리얼 리스크</h1>
+        <p>씨유레저가 현장에서 직접 쌓아온 인사이트. 회원권 시장과 사업지 정상화에 관한 전문 콘텐츠입니다.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="insight-grid">
+          <a href="posts/post-market-2024.html" class="insight-card featured-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/iDExdhdYxHM/download?force=true&w=1200');"></div>
+            <div class="insight-body" style="display:flex;flex-direction:column;justify-content:center;">
+              <span class="insight-cat">시장 분석</span>
+              <h3 style="font-size:22px;">2024 국내 리조트 회원권 시장 현황과 전망</h3>
+              <p>코로나 이후 회원권 시장의 구조적 변화와 향후 주목해야 할 트렌드를 분석했습니다.</p>
+              <div class="insight-meta"><span>2026.03.15</span><span>·</span><span>읽는 시간 약 5분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-recovery.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/k9hnlQTccgk/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">법정관리</span>
+              <h3>법정관리 사업지, 정상화까지 얼마나 걸리나</h3>
+              <p>회생 절차의 단계별 소요 기간과 성공률을 높이는 핵심 변수를 실무 경험 기반으로 정리했습니다.</p>
+              <div class="insight-meta"><span>2026.02.28</span><span>·</span><span>읽는 시간 약 6분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-golf-membership.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/bCK0gvNmK7A/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">골프 멤버십</span>
+              <h3>골프 회원권 분양, 왜 일반 분양과 다른가</h3>
+              <p>고가 멤버십 상품의 구매 결정 구조와 이를 공략하는 프라이빗 세일즈 방법론을 소개합니다.</p>
+              <div class="insight-meta"><span>2026.02.10</span><span>·</span><span>읽는 시간 약 4분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-stagnation.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/cR4vAqsb-lE/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">분양 전략</span>
+              <h3>분양 부진의 3가지 진짜 원인</h3>
+              <p>상품이 좋은데 분양이 안 된다면, 문제는 대부분 이 세 가지 중 하나입니다.</p>
+              <div class="insight-meta"><span>2026.01.20</span><span>·</span><span>읽는 시간 약 3분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-vvip.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/cR4vAqsb-lE/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">시장 분석</span>
+              <h3>고자산가 시장의 투자 심리 변화</h3>
+              <p>금리 인상기 이후 고자산가들의 레저·부동산 투자 패턴이 어떻게 달라졌는지 분석합니다.</p>
+              <div class="insight-meta"><span>2026.01.05</span><span>·</span><span>읽는 시간 약 5분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-crisis.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/JpQstPBTLwo/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">사업 사례</span>
+              <h3>금융위기 속에서도 사업을 완주한 이유</h3>
+              <p>2009년 글로벌 금융위기 당시 함양 사업지를 성공으로 이끈 씨유레저의 위기 대응 방식.</p>
+              <div class="insight-meta"><span>2025.12.18</span><span>·</span><span>읽는 시간 약 4분</span></div>
+            </div>
+          </a>
+          <a href="posts/post-interview.html" class="insight-card">
+            <div class="insight-thumb" style="background-image:url('https://unsplash.com/photos/k9hnlQTccgk/download?force=true&w=1200');"></div>
+            <div class="insight-body">
+              <span class="insight-cat">전문가 인사이트</span>
+              <h3>"흙먼지를 마시는 리더십" — 류성현 영남지사장 인터뷰</h3>
+              <p>동의서 한 장을 받기 위해 가장 먼저 현장에 뛰어드는 씨유레저 현장 리더십의 실체.</p>
+              <div class="insight-meta"><span>2025.11.10</span><span>·</span><span>읽는 시간 약 5분</span></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+    <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info-row">
+          <div class="footer-info-item footer-brand">
+            <strong>주식회사 씨유레저</strong>
+            <span>대표 채수용 | 사업자 220-87-89046</span>
+            <span>개인정보관리책임자 이요한</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>본사</strong>
+            <span>서울 강남구 봉은사로82길 9-5 2F,3F</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>영남지사</strong>
+            <span>울산광역시 북구 관문길 40, 3층</span>
+          </div>
+          <div class="footer-info-item">
+            <strong>연락처</strong>
+            <span>02-449-8221</span>
+            <span>chaeumgnl@naver.com</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-line">
+        <span>© 2026 CU Leisure. All rights reserved.</span>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="insight.html">Insight</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+<script src="common.js"></script>
+</body>
+</html>
+
+
