@@ -66,6 +66,19 @@
     .brand span { color: var(--accent); }
     .nav-links { display: flex; gap: 24px; color: #5a6b7f; font-size: 14px; }
     .nav-links a:hover { color: var(--accent); transition: color .2s; }
+    @media (max-width: 760px) {
+      .nav-cta { display: none; }
+      .nav-links {
+        display: none; flex-direction: column; gap: 0;
+        position: absolute; top: 76px; left: 0; right: 0;
+        background: rgba(255,255,255,.98); border-bottom: 1px solid rgba(0,102,204,.08);
+        box-shadow: 0 8px 24px rgba(0,0,0,.08); padding: 12px 0; z-index: 49;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 14px 28px; font-size: 15px; border-bottom: 1px solid rgba(0,102,204,.08); display: block; }
+      .nav-links a:last-child { border-bottom: none; }
+      .nav-inner { position: relative; }
+    }
 
     /* btn */
     .btn {
@@ -280,7 +293,7 @@
         <a href="insight.html">Insight</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <a class="btn btn-secondary btn-sm" href="contact.html">Contact Us</a>
+      <a class="btn btn-secondary btn-sm nav-cta" href="contact.html">Contact Us</a>
     </div>
   </header>
 
